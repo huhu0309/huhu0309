@@ -1,12 +1,12 @@
 
 """
-File: 汪汪红包.py
+File: ww_red.py
 作者：胡胡
 每隔0.5秒并发抢三次，抢3秒共计16次
 export ww_ck="需要兑换红包的完整ck"
 export ww_red="需要兑换的红包金额，只能是3或者10" #未设置ww_red,默认查询账户余额
 cron:  0 0 * * *
-new Env('汪汪单号版');
+new Env('ww_red');
 """
 
 
