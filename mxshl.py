@@ -24,9 +24,11 @@ def getCookie():
     except Exception as e:
         logging.error(f"【getCookie Error】{e}")
 
+host="https://api.m.jd.com/?"
 def guanzhu(cookie):
-    url = "https://api.m.jd.com/?uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1690788541745&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014027,%22encryptProjectId%22:%222J41B43Xww1EiWmcQFjLBuSFUzJQ%22,%22encryptAssignmentId%22:%228FCmmVqArVZauH6fJ9seZ5wtBYa%22,%22assignmentType%22:3,%22itemId%22:%2260096%22,%22actionType%22:0%7D"
+    url = host+"uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1692605705915&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014124,%22encryptProjectId%22:%223WV2aobWDbvTEYNBHJrYjRw7Reut%22,%22encryptAssignmentId%22:%224Jd5XTB2ismSvkRMPMfS2rZ6sX7c%22,%22assignmentType%22:3,%22itemId%22:%221000396688%22,%22actionType%22:0%7D"
     headers = {
+        # "User-Agent": "jdapp;android;12.0.4;;;M/5.0;appBuild/98801;ef/1;ep/%7B%22hdid%22%3A%22JM9F1ywUPwflvMIpYPok0tt5k9kW4ArJEU3lfLhxBqw%3D%22%2C%22ts%22%3A1690788509997%2C%22ridx%22%3A-1%2C%22cipher%22%3A%7B%22sv%22%3A%22CJC%3D%22%2C%22ad%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%2C%22od%22%3A%22CQU0DWU5DzU5YzTuDNZwCwUzCzHwZWHsEQVuDWSyDWOzDWYyEWSyCwPuCQDvDzq2YwYyDJVrDNU4EQUnDJuzDG%3D%3D%22%2C%22ov%22%3A%22CzC%3D%22%2C%22ud%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%7D%2C%22ciphertype%22%3A5%2C%22version%22%3A%221.2.0%22%2C%22appname%22%3A%22com.jingdong.app.mall%22%7D;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 13; V2217A Build/TP1A.220624.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046247 Mobile Safari/537.36",
         "User-Agent": "Mozilla/5.0 (Linux; Android 12.0.1; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.9999.99 Mobile Safari/537.36",
         "Accept": "application/json, text/plain, */*",
         "Origin": "https://prodev.m.jd.com",
@@ -42,12 +44,12 @@ def guanzhu(cookie):
     }
     response = requests.post(url, headers=headers)
     # print(response.status_code)
-    # logging.info(response.text)
+    # print(response.text)
 
 def wanchen(cookie):
-    url = "https://api.m.jd.com/?uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1690789723111&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014027,%22encryptProjectId%22:%222J41B43Xww1EiWmcQFjLBuSFUzJQ%22,%22encryptAssignmentId%22:%223bNugV1jcXMYTJ2Nps67UatjoJoB%22,%22assignmentType%22:1,%22itemId%22:%229501806540%22,%22actionType%22:0%7D"
+    url = host+"uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1692605775926&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014124,%22encryptProjectId%22:%223WV2aobWDbvTEYNBHJrYjRw7Reut%22,%22encryptAssignmentId%22:%223uQzzP3gpqZaPndMg47nf3oxTy2r%22,%22assignmentType%22:1,%22itemId%22:%222301817939%22,%22actionType%22:0%7D"
     headers = {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 12.0.1; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.9999.99 Mobile Safari/537.36",
+        "User-Agent": "jdapp;android;12.0.4;;;M/5.0;appBuild/98801;ef/1;ep/%7B%22hdid%22%3A%22JM9F1ywUPwflvMIpYPok0tt5k9kW4ArJEU3lfLhxBqw%3D%22%2C%22ts%22%3A1690788509997%2C%22ridx%22%3A-1%2C%22cipher%22%3A%7B%22sv%22%3A%22CJC%3D%22%2C%22ad%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%2C%22od%22%3A%22CQU0DWU5DzU5YzTuDNZwCwUzCzHwZWHsEQVuDWSyDWOzDWYyEWSyCwPuCQDvDzq2YwYyDJVrDNU4EQUnDJuzDG%3D%3D%22%2C%22ov%22%3A%22CzC%3D%22%2C%22ud%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%7D%2C%22ciphertype%22%3A5%2C%22version%22%3A%221.2.0%22%2C%22appname%22%3A%22com.jingdong.app.mall%22%7D;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 13; V2217A Build/TP1A.220624.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046247 Mobile Safari/537.36",
         "Accept": "application/json, text/plain, */*",
         "Origin": "https://prodev.m.jd.com",
         "X-Requested-With": "com.jingdong.app.mall",
@@ -63,13 +65,13 @@ def wanchen(cookie):
     response = requests.post(url, headers=headers)
 
     # print(response.status_code)
-    # logging.info(response.text)
+    # print(response.text)
 
 def linqu(cookie):
-    url = "https://api.m.jd.com/?uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1690789704831&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014027,%22encryptProjectId%22:%222J41B43Xww1EiWmcQFjLBuSFUzJQ%22,%22encryptAssignmentId%22:%223bNugV1jcXMYTJ2Nps67UatjoJoB%22,%22assignmentType%22:1,%22itemId%22:%229501806540%22,%22actionType%22:1%7D"
+    url = host+"uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1692605762462&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014124,%22encryptProjectId%22:%223WV2aobWDbvTEYNBHJrYjRw7Reut%22,%22encryptAssignmentId%22:%223uQzzP3gpqZaPndMg47nf3oxTy2r%22,%22assignmentType%22:1,%22itemId%22:%222301817939%22,%22actionType%22:1%7D"
     headers = {
         "Accept": "application/json, text/plain, */*",
-        "User-Agent": "Mozilla/5.0 (Linux; Android 12.0.1; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.9999.99 Mobile Safari/537.36",
+        "User-Agent": "jdapp;android;12.0.4;;;M/5.0;appBuild/98801;ef/1;ep/%7B%22hdid%22%3A%22JM9F1ywUPwflvMIpYPok0tt5k9kW4ArJEU3lfLhxBqw%3D%22%2C%22ts%22%3A1690788509997%2C%22ridx%22%3A-1%2C%22cipher%22%3A%7B%22sv%22%3A%22CJC%3D%22%2C%22ad%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%2C%22od%22%3A%22CQU0DWU5DzU5YzTuDNZwCwUzCzHwZWHsEQVuDWSyDWOzDWYyEWSyCwPuCQDvDzq2YwYyDJVrDNU4EQUnDJuzDG%3D%3D%22%2C%22ov%22%3A%22CzC%3D%22%2C%22ud%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%7D%2C%22ciphertype%22%3A5%2C%22version%22%3A%221.2.0%22%2C%22appname%22%3A%22com.jingdong.app.mall%22%7D;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 13; V2217A Build/TP1A.220624.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046247 Mobile Safari/537.36",
         "Origin": "https://prodev.m.jd.com",
         "X-Requested-With": "com.jingdong.app.mall",
         "Sec-Fetch-Site": "same-site",
@@ -84,13 +86,13 @@ def linqu(cookie):
     response = requests.post(url, headers=headers)
 
     # print(response.status_code)
-    # logging.info(response.text)
+    # print(response.text)
 
 def liulan1(cookie):
-    url = "https://api.m.jd.com/?uuid=&client=wh5&area=7_446_453_56901&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1690791117923&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014027,%22encryptProjectId%22:%222J41B43Xww1EiWmcQFjLBuSFUzJQ%22,%22encryptAssignmentId%22:%222o8MgcMmdAK1vR9nEarJQNLKARQ5%22,%22assignmentType%22:1,%22itemId%22:%2210043809371376%22,%22actionType%22:0%7D"
+    url = host+"uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1692605940910&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014124,%22encryptProjectId%22:%223WV2aobWDbvTEYNBHJrYjRw7Reut%22,%22encryptAssignmentId%22:%222DzzS4iHDNAh5WGMmAPGzYBQPQ5X%22,%22assignmentType%22:1,%22itemId%22:%22100056452802%22,%22actionType%22:0%7D"
     headers = {
         "Accept": "application/json, text/plain, */*",
-        "User-Agent": "Mozilla/5.0 (Linux; Android 12.0.1; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.9999.99 Mobile Safari/537.36",
+        "User-Agent": "jdapp;android;12.0.4;;;M/5.0;appBuild/98801;ef/1;ep/%7B%22hdid%22%3A%22JM9F1ywUPwflvMIpYPok0tt5k9kW4ArJEU3lfLhxBqw%3D%22%2C%22ts%22%3A1690788509997%2C%22ridx%22%3A-1%2C%22cipher%22%3A%7B%22sv%22%3A%22CJC%3D%22%2C%22ad%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%2C%22od%22%3A%22CQU0DWU5DzU5YzTuDNZwCwUzCzHwZWHsEQVuDWSyDWOzDWYyEWSyCwPuCQDvDzq2YwYyDJVrDNU4EQUnDJuzDG%3D%3D%22%2C%22ov%22%3A%22CzC%3D%22%2C%22ud%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%7D%2C%22ciphertype%22%3A5%2C%22version%22%3A%221.2.0%22%2C%22appname%22%3A%22com.jingdong.app.mall%22%7D;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 13; V2217A Build/TP1A.220624.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046247 Mobile Safari/537.36",
         "Origin": "https://prodev.m.jd.com",
         "X-Requested-With": "com.jingdong.app.mall",
         "Sec-Fetch-Site": "same-site",
@@ -105,12 +107,12 @@ def liulan1(cookie):
 
     response = requests.post(url, headers=headers)
     # print(response.status_code)
-    # logging.info(response.text)
+    # print(response.text)
 def liulan2(cookie):
-    url = "https://api.m.jd.com/?uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1690791323831&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014027,%22encryptProjectId%22:%222J41B43Xww1EiWmcQFjLBuSFUzJQ%22,%22encryptAssignmentId%22:%222o8MgcMmdAK1vR9nEarJQNLKARQ5%22,%22assignmentType%22:1,%22itemId%22:%22100059101986%22,%22actionType%22:0%7D"
+    url = host+"uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1692605974402&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014124,%22encryptProjectId%22:%223WV2aobWDbvTEYNBHJrYjRw7Reut%22,%22encryptAssignmentId%22:%222DzzS4iHDNAh5WGMmAPGzYBQPQ5X%22,%22assignmentType%22:1,%22itemId%22:%22100029082004%22,%22actionType%22:0%7D"
     headers = {
         "Accept": "application/json, text/plain, */*",
-        "User-Agent": "Mozilla/5.0 (Linux; Android 12.0.1; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.9999.99 Mobile Safari/537.36",
+        "User-Agent": "jdapp;android;12.0.4;;;M/5.0;appBuild/98801;ef/1;ep/%7B%22hdid%22%3A%22JM9F1ywUPwflvMIpYPok0tt5k9kW4ArJEU3lfLhxBqw%3D%22%2C%22ts%22%3A1690788509997%2C%22ridx%22%3A-1%2C%22cipher%22%3A%7B%22sv%22%3A%22CJC%3D%22%2C%22ad%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%2C%22od%22%3A%22CQU0DWU5DzU5YzTuDNZwCwUzCzHwZWHsEQVuDWSyDWOzDWYyEWSyCwPuCQDvDzq2YwYyDJVrDNU4EQUnDJuzDG%3D%3D%22%2C%22ov%22%3A%22CzC%3D%22%2C%22ud%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%7D%2C%22ciphertype%22%3A5%2C%22version%22%3A%221.2.0%22%2C%22appname%22%3A%22com.jingdong.app.mall%22%7D;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 13; V2217A Build/TP1A.220624.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046247 Mobile Safari/537.36",
         "Origin": "https://prodev.m.jd.com",
         "X-Requested-With": "com.jingdong.app.mall",
         "Sec-Fetch-Site": "same-site",
@@ -125,14 +127,14 @@ def liulan2(cookie):
     response = requests.post(url, headers=headers)
 
     # print(response.status_code)
-    # logging.info(response.text)
+    # print(response.text)
 
 
 def liulan3(cookie):
-    url = "https://api.m.jd.com/?uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1690791464094&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014027,%22encryptProjectId%22:%222J41B43Xww1EiWmcQFjLBuSFUzJQ%22,%22encryptAssignmentId%22:%222o8MgcMmdAK1vR9nEarJQNLKARQ5%22,%22assignmentType%22:1,%22itemId%22:%2210080355029978%22,%22actionType%22:0%7D"
+    url = host+"uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandDoTask&t=1692606007139&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014124,%22encryptProjectId%22:%223WV2aobWDbvTEYNBHJrYjRw7Reut%22,%22encryptAssignmentId%22:%222DzzS4iHDNAh5WGMmAPGzYBQPQ5X%22,%22assignmentType%22:1,%22itemId%22:%22100060880861%22,%22actionType%22:0%7D"
     headers = {
         "Accept": "application/json, text/plain, */*",
-        "User-Agent": "Mozilla/5.0 (Linux; Android 12.0.1; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.9999.99 Mobile Safari/537.36",
+        "User-Agent": "jdapp;android;12.0.4;;;M/5.0;appBuild/98801;ef/1;ep/%7B%22hdid%22%3A%22JM9F1ywUPwflvMIpYPok0tt5k9kW4ArJEU3lfLhxBqw%3D%22%2C%22ts%22%3A1690788509997%2C%22ridx%22%3A-1%2C%22cipher%22%3A%7B%22sv%22%3A%22CJC%3D%22%2C%22ad%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%2C%22od%22%3A%22CQU0DWU5DzU5YzTuDNZwCwUzCzHwZWHsEQVuDWSyDWOzDWYyEWSyCwPuCQDvDzq2YwYyDJVrDNU4EQUnDJuzDG%3D%3D%22%2C%22ov%22%3A%22CzC%3D%22%2C%22ud%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%7D%2C%22ciphertype%22%3A5%2C%22version%22%3A%221.2.0%22%2C%22appname%22%3A%22com.jingdong.app.mall%22%7D;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 13; V2217A Build/TP1A.220624.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046247 Mobile Safari/537.36",
         "Origin": "https://prodev.m.jd.com",
         "X-Requested-With": "com.jingdong.app.mall",
         "Sec-Fetch-Site": "same-site",
@@ -146,12 +148,12 @@ def liulan3(cookie):
 
     response = requests.post(url, headers=headers)
     # print(response.status_code)
-    # logging.info(response.text)
+    # print(response.text)
 def choujiang(cookie):
-    url = "https://api.m.jd.com/?uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandTaskLottery&t=1690791581140&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014027,%22encryptProjectId%22:%222J41B43Xww1EiWmcQFjLBuSFUzJQ%22%7D"
+    url = host+"uuid=&client=wh5&area=7_446_453_56899&appid=ProductZ4Brand&functionId=superBrandTaskLottery&t=1692606033541&body=%7B%22source%22:%22star_gift%22,%22activityId%22:1014124,%22encryptProjectId%22:%223WV2aobWDbvTEYNBHJrYjRw7Reut%22%7D"
     headers = {
         "Accept": "application/json, text/plain, */*",
-        "User-Agent": "Mozilla/5.0 (Linux; Android 12.0.1; Pixel 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.9999.99 Mobile Safari/537.36",
+        "User-Agent": "jdapp;android;12.0.4;;;M/5.0;appBuild/98801;ef/1;ep/%7B%22hdid%22%3A%22JM9F1ywUPwflvMIpYPok0tt5k9kW4ArJEU3lfLhxBqw%3D%22%2C%22ts%22%3A1690788509997%2C%22ridx%22%3A-1%2C%22cipher%22%3A%7B%22sv%22%3A%22CJC%3D%22%2C%22ad%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%2C%22od%22%3A%22CQU0DWU5DzU5YzTuDNZwCwUzCzHwZWHsEQVuDWSyDWOzDWYyEWSyCwPuCQDvDzq2YwYyDJVrDNU4EQUnDJuzDG%3D%3D%22%2C%22ov%22%3A%22CzC%3D%22%2C%22ud%22%3A%22EJO3CJq5DQVtDJSyDQYmEK%3D%3D%22%7D%2C%22ciphertype%22%3A5%2C%22version%22%3A%221.2.0%22%2C%22appname%22%3A%22com.jingdong.app.mall%22%7D;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 13; V2217A Build/TP1A.220624.003; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046247 Mobile Safari/537.36",
         "Origin": "https://prodev.m.jd.com",
         "X-Requested-With": "com.jingdong.app.mall",
         "Sec-Fetch-Site": "same-site",
